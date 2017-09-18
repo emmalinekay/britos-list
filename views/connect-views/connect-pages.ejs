@@ -1,0 +1,29 @@
+
+
+
+  <!-- Info Card UI Design @ildiesign  coding: @oDsoky  -->
+
+  <div class="container">
+  	<img src="" alt="image">
+  	<div class="rate">
+  		<h3 class="title-card"><%= connectInfo.firstName %> <%= connectInfo.lastName %></h3>
+
+  </div>
+
+  <p> <%= connectInfo.email %> </p>
+
+  <p> <%= connectInfo.phoneNumber %> </p>
+
+  <p> <%= connectInfo.originOfConnection%> </p>
+
+  <p> <%= connectInfo.description %> </p>
+
+  <a href="/connections/<%= connectInfo._id %>/edit" class="btn btn-outline-info" role="button">Edit</a>
+
+  <form method="post" action="/connections/<%= connectInfo._id %>/delete">
+      <button type="button" class="btn btn-outline-info"> Delete </button>
+  </form>
+
+
+
+  </div>

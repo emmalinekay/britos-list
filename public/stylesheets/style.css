@@ -1,0 +1,364 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}*/
+
+
+.links {
+  font-size: 18px;
+  padding: 5px;
+  font-weight: 300;
+  margin-right: 20px;
+  float: right;
+}
+
+.pull-left {
+  text-align: center;
+  padding-top: 25px;
+  word-spacing: 10px;
+  color: #77777F;
+
+}
+.myCarousel {
+  height: 300px;
+}
+
+.navigation {
+ margin: 0;
+ padding: 0;
+ display: inline-block;
+ float: right;
+ margin-right: 5%;
+}
+
+.slider-image {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+}
+
+.image-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.image-header, .image-p {
+  color: white;
+}
+
+.image-header {
+  font-size: 60px;
+}
+
+.btn {
+  background-color: #ABC2C9;
+  border: #ABC2C9;
+  color: black;
+}
+
+.image-p {
+  font-size: 30px;
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+}
+
+
+.services {
+  background-color: #ABC2C9;
+  border-top: outset 8px #9CB1B7;
+  border-bottom: inset 8px #9CB1B7;
+  padding-top: 45px;
+}
+
+.services, .latest-projects {
+    text-align: center;
+}
+
+.glyphicon-heart, .glyphicon-star, .glyphicon-glass {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 18px;
+  border: 5px solid white;
+  border-radius: 100%;
+
+}
+
+.homeH2, .first-text {
+  color: white;
+}
+
+.first-text {
+  padding-bottom: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.h2-projects {
+  color: black;
+  font-size: 25px;
+  line-height: 10px;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.h3-projects {
+  color: #AAAAAA;
+}
+
+.h3-projects, p {
+  font-size: 14px;
+}
+
+.container-heading {
+  text-align: left;
+}
+
+.project {
+  height: 140px;
+}
+
+.blog-images {
+  width: 210px;
+}
+
+
+.footer-titles {
+  padding-top: 20px;
+  color: white;
+}
+
+.footer {
+  background-color: #3B3B3B;
+  border-top: outset 8px #F96B61;
+  padding-bottom: 15px;
+}
+
+#form {
+  margin: 30px auto;
+  width: 380px;
+}
+
+#form label {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 100px;
+  padding-left: 15px;
+  padding-top: 30px;
+}
+
+#form input,
+#form button {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+#form button {
+  background: #ABC2C9;
+  border: 1px solid #9CB1B7;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 25%;
+  border-radius: 40px;
+  margin-top: 30px;
+  margin-left: 280px;
+}
+
+#form button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: .3s ease background;
+  border-radius: 40px;
+}
+
+.container {
+  width: 460px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.login-heading, .signup-heading {
+  text-align: center;
+  font-size: 60px;
+}
+
+.header-text, .login-heading, .signup-heading {
+  font-family: 'Satisfy', cursive;
+  color: #666;
+}
+
+.header-text {
+  font-size: 50px;
+  padding-left: 50px;
+}
+
+.error-message {
+  background: #F02B63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.success-message {
+  background: #009245;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#connect-form {
+  margin: 30px ;
+  width: 600px;
+  padding-left: 50px;
+}
+
+#connect-form label, textarea {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding-left: 30px;
+  padding-top: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+#connect-form input,
+#connect-form button {
+  box-sizing: border-box;
+  font-size: 20px;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#connect-form button {
+  background: #ABC2C9;
+  border: 1px solid #9CB1B7;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 25%;
+  border-radius: 100px;
+  margin-top: 30px;
+  margin-left: 280px;
+}
+
+#connect-form button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: .3s ease background;
+  border-radius: 100px;
+}
+
+.new-connection, .edit-connection {
+  float: left;
+  width: 700px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-bottom: 60px;
+}
+
+.edit-connection {
+   text-align: center;
+
+}
+
+.dashboard-title, .welcome-title, .edit-title {
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+  color: #666;
+  font-size: 40px;
+}
+
+.welcome {
+  float: left;
+  width: 400px;
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-bottom: 60px;
+}
+
+.user-icon {
+  width: 75px;
+}
+
+.welcome-title, .user-icon {
+  display: flex;
+  justify-content: center;
+}
+
+#presentation, #dash {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.nav {
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+a {
+  color: #666;
+}
+
+a:hover {
+  color: #B5B4AB;
+  text-decoration: none;
+}
+
+#dash {
+  padding-top: 30px;
+  font-weight: bold;
+  line-height: 20px;
+}

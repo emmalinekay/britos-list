@@ -1,0 +1,43 @@
+<!-- This is where users signup -->
+<style>
+body {
+  background-image: url(./images/background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<div class="container">
+
+<h2 class="signup-heading"> Sign Up </h2>
+
+<form id="form" method="post" action="/process-signup">
+
+  <% if (typeof feedbackMessage !== 'undefined') { %>
+    <p class="error-message"> <%= feedbackMessage %> </p>
+  <% } %>
+
+  <label for="email-input"> Email </label>
+  <input  id="email-input" name="signupEmail" type="email"
+      placeholder="john@example.com">
+  <br>
+
+  <label for="password-input"> Password </label>
+  <input  id="password-input" name="signupPassword" type="password"
+      placeholder="******">
+  <br>
+
+  <button> Sign Up </button>
+
+</form>
+</div>
+<!-- <a href="/auth/facebook">
+  Log In with Facebook
+</a>
+<br>
+
+<a href="/auth/google">
+  Log In with Google
+</a>
+<br> -->

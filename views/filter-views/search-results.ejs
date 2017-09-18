@@ -1,0 +1,28 @@
+<h2> Search Results </h2>
+
+<form method="get" action="/connections/search-results">
+  <label for="term-input"> Search again </label>
+  <input  id="term-input" name="searchTerm" type="search"
+      value="<%= lastSearch %>">
+
+  <button> Search </button>
+</form>
+
+<p> You searched for <strong><%= lastSearch %></strong>. </p>
+<p> There were <%= listOfResults.length %> results. </p>
+
+<ul>
+  <% listOfConnections.forEach((oneConnect) => { %>
+    <li>
+      <h3> <%= oneConnect.firstName %> </h3>
+      <h3><%= oneConnect.email %></h3>
+      <h3><%= oneConnect.lastName %></h3>
+
+
+           <a href="/connections/<%= oneConnect._id %>">
+             Details
+           </a>
+
+    </li>
+  <% })  %>
+</ul>

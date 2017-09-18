@@ -1,0 +1,32 @@
+<!-- This is where the short list of connections goes. -->
+
+<!-- <h2> Your Connections </h2> -->
+
+<div id="demo">
+  <h1 class="list-heading">Your Connections</h1>
+
+  <!-- Responsive table starts here -->
+  <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+  <div class="table-responsive-vertical shadow-z-1">
+  <!-- Table starts here -->
+  <table id="table" class="table table-hover table-mc-light-blue">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>E-mail</th>
+          <th>Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% listOfConnections.forEach((oneConnect) => { %>
+        <tr>
+          <td data-title="ID"><%= oneConnect.firstName %></td>
+          <td data-title="Name"><%= oneConnect.lastName %></td>
+          <td data-title="Link"><%= oneConnect.email %></td>
+          <td data-title="Status"><a href="/connections/<%= oneConnect._id %>"> Details </a></td>
+        </tr>
+      <% })  %>
+      </tbody>
+    </table>
+  </div>

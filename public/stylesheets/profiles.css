@@ -1,0 +1,85 @@
+body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: white;
+}
+
+.container {
+	width: 400px;
+	padding: 20px;
+	color: #E0DFD5;
+	margin: 2em auto;
+	overflow: hidden;
+	background: rgb(76, 76, 76);
+  box-shadow: 0 0 20px 0px rgb(47, 47, 47),
+							0 0 20px 0px rgba(107, 104, 104, 0);
+
+}
+
+.container img {width: 100%;}
+
+.container .title-card {
+	font-size: 25px;
+	font-weight: 100;
+	margin: 10px 0 0 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+.container .rate .fa{color: gold; letter-spacing:1px; font-size:18px;}
+
+.container .rate p{
+	color: #fff;
+	font-weight: 100;
+	font-size: 17px;
+	display: inline;
+}
+
+.container span {
+	width: 100%;
+	color: #FFFFFF;
+	display: inline-block;
+}
+.container .map{ margin: 1px 0 -15px 0; }
+.container .phone{ margin: -5px 0 10px 0; }
+
+
+.container span p{
+	color: #FFFFFF;
+	margin-left: 10px;
+	}
+
+.container span p, i{
+	font-size:16px;
+	font-weight: 100;
+	display: inline-block;
+}
+
+button, .btn {
+  width: 50%;
+	color: #fff;
+	padding:17px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	transition: all 0.3s linear;
+	font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(to left, rgb(11, 191, 160), rgb(108, 196, 115));
+
+	opacity: 1;
+}
+
+button:hover{
+	background: linear-gradient(to right, rgb(11, 191, 160), rgb(108, 196, 115));
+	opacity: 0.9;
+}
+
+
+p {
+	color: #D8DBE2;
+	font-size: 14px;
+	line-height: 1.5;
+	letter-spacing: 0.3px;
+	font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,48 @@
+<style>
+body {
+  background-color: #E0DFD5;
+}
+</style>
+
+<div class="edit-connection">
+
+<h2 class="edit-title"> Edit Connection </h2>
+
+
+<form id="connect-form" method="post" action="/connections/<%= connectInfo._id %>">
+
+  <label for="first-name-input"> First Name </label>
+  <input  id="first-name-input" name="firstName" type="text"
+      value="<%= connectInfo.firstName %>">
+  <br>
+
+  <label for="last-name-input"> Last Name </label>
+  <input  id="last-name-input" name="lastName" type="text"
+        value="<%= connectInfo.lastName %>">
+  <br>
+
+  <label for="email-input"> E-mail </label>
+  <input  id="email-input" name="emailValue" type="email"
+        value="<%= connectInfo.email %>">
+  <br>
+
+  <label for="number-input"> Phone Number </label>
+  <input  id="number-input" name="phoneNumber" type="number"
+        value="<%= connectInfo.phoneNumber %>">
+  <br>
+
+  <label for="origin-input"> Where You Met </label>
+  <input  id="origin-input" name="originOfConnection" type="text"
+        value="<%= connectInfo.originOfConnection %>">
+  <br>
+
+  <label   for="description-input"> Description </label>
+  <textarea id="description-input" name="connectDescription">
+    <%= connectInfo.description %></textarea>
+  <br>
+
+  <button> Update </button>
+
+</form>
+
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Brito's List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/table.js">
+    <link rel="stylesheet" href="/stylesheets/table.css">
+    <link rel="stylesheet" href="/stylesheets/profiles.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <h1 class="header-text"> Brito's List </h1>
+
+        <% if (currentUser) { %>
+
+          <ul id="navbar">
+
+            <li id="presentation" class="active"><a href="/dashboard">Home</a></li>
+            <li id="presentation"><a href="/connections">Connections</a></li>
+            <li id="presentation"><a href="/connections/search">Search</a></li>
+            <li id="presentation"><a href="/logout">Log Out</a></li>
+          </ul>
+
+
+        <% } else { %>
+          <ul id="navbar">
+            <li id="presentation" class="active"><a href="/signup">Sign Up</a></li>
+            <li id="presentation"><a href="/login">Log In</a></li>
+          </ul>
+
+
+        <% } %>
+      </div>
+    </header>
+
+    <%- body %>
+
+    <script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./stylesheets/main.js"></script>
+  </body>
+</html>
