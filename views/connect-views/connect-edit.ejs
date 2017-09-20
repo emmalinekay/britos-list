@@ -1,6 +1,6 @@
 <style>
 body {
-  background-color: #E0DFD5;
+  background-color: #37454e;
 }
 </style>
 
@@ -9,37 +9,53 @@ body {
 <h2 class="edit-title"> Edit Connection </h2>
 
 
-<form id="connect-form" method="post" action="/connections/<%= connectInfo._id %>">
+<form id="connect-form" method="post" action="/connections/<%= connectInfo._id %>" enctype="multipart/form-data">
 
-  <label for="first-name-input"> First Name </label>
-  <input  id="first-name-input" name="firstName" type="text"
-      value="<%= connectInfo.firstName %>">
-  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <label for="first-name-input"> New First Name (optional) </label>
+      <input  id="first-name-input" name="firstName" type="text"
+          value="<%= connectInfo.firstName %>">
+      <br>
 
-  <label for="last-name-input"> Last Name </label>
-  <input  id="last-name-input" name="lastName" type="text"
-        value="<%= connectInfo.lastName %>">
-  <br>
+      <label for="last-name-input"> New Last Name (optional) </label>
+      <input  id="last-name-input" name="lastName" type="text"
+            value="<%= connectInfo.lastName %>">
+      <br>
 
-  <label for="email-input"> E-mail </label>
-  <input  id="email-input" name="emailValue" type="email"
-        value="<%= connectInfo.email %>">
-  <br>
+      <label for="photo-input"> New Photo (optional) </label>
+      <input id="photo-input" name="photo" type="file">
+        <br>
 
-  <label for="number-input"> Phone Number </label>
-  <input  id="number-input" name="phoneNumber" type="number"
-        value="<%= connectInfo.phoneNumber %>">
-  <br>
+      <label for="email-input"> New E-mail (optional)</label>
+      <input  id="email-input" name="emailValue" type="email"
+            value="<%= connectInfo.email %>">
+      <br>
+  </div>
 
-  <label for="origin-input"> Where You Met </label>
-  <input  id="origin-input" name="originOfConnection" type="text"
-        value="<%= connectInfo.originOfConnection %>">
-  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <label for="company-input"> New Company (optional)</label>
+      <input  id="compny-input" name="company" type="text"
+            value="<%= connectInfo.company%>">
+      <br>
 
-  <label   for="description-input"> Description </label>
-  <textarea id="description-input" name="connectDescription">
-    <%= connectInfo.description %></textarea>
-  <br>
+      <label for="number-input"> New Phone Number (optional)</label>
+      <input  id="number-input" name="phoneNumber" type="number"
+            value="<%= connectInfo.phoneNumber %>">
+      <br>
+
+      <label for="origin-input"> Where You Met (optional) </label>
+      <input  id="origin-input" name="originOfConnection" type="text"
+            value="<%= connectInfo.originOfConnection %>">
+      <br>
+
+      <label   for="description-input"> New Description (optional) </label>
+      <textarea id="description-input" name="connectDescription">
+        <%= connectInfo.description %></textarea>
+      <br>
+    </div>
+  </div>
 
   <button> Update </button>
 

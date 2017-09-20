@@ -2,9 +2,21 @@
 
 <body class="list-body">
 <div id="demo">
-  <h1 class="list-heading">Your Results</h1>
-  <p> You searched for <strong>'<%= lastSearch %>'</strong>. </p>
-  <p> There were <%= listOfResults.length %> results. </p>
+  <div class="list-heading1">
+    <h1 class="list-heading">Filtered By Last Name</h1>
+</div>
+
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter By ↓
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/connections/firstname">First Name</a>
+    <a class="dropdown-item" href="/connections/lastname">Last Name</a>
+    <a class="dropdown-item" href="/connections/company">Company</a>
+  </div>
+</div>
+
 
   <!-- Responsive table starts here -->
   <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
@@ -20,7 +32,7 @@
         </tr>
       </thead>
       <tbody>
-        <% listOfResults.forEach((oneConnect) => { %>
+        <% listOfNames.forEach((oneConnect) => { %>
         <tr>
           <td data-title="ID"><%= oneConnect.firstName %></td>
           <td data-title="Name"><%= oneConnect.lastName %></td>

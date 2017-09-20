@@ -61,11 +61,11 @@ app.use('/', index);
 const myAuthRoutes = require('./routes/auth-router.js');
 app.use(myAuthRoutes);
 
-const myConnectRoutes = require('./routes/connect-router.js');
-app.use(myConnectRoutes);
-
 const myConnectFilters = require('./routes/connect-filters.js');
 app.use(myConnectFilters);
+
+const myConnectRoutes = require('./routes/connect-router.js');
+app.use(myConnectRoutes);
 
 
 // catch 404 and forward to error handler

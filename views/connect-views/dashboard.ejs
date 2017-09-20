@@ -1,60 +1,68 @@
 <!-- Here's where the add connection form and welcome back goes. -->
+<body class="dash-body">
+
 <style>
 body {
-  background-image: url(./images/backgr.jpg);
+  background-image: url(./images/group5.jpg);
   background-position: center;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-size: cover;
 }
 </style>
+<!-- <div class="welcome">
+<h3 class="welcome-title"> Welcome to <br> Brito's List! </h3>
 
-<div class="welcome">
-<div class="col-sm-5">
-<h3 class="welcome-title"> Welcome! </h3>
-<img src="./images/user-icon.png" alt="user-icon" class="user-icon">
-<ul>
-<li id="dash"><a href="/dashboard">Add a New Connection</a></li>
-<li id="dash"><a href="/connections">Your Connections</a></li>
-<li id="dash"><a href="/connections/search">Search Your Connections</a></li>
-<li id="dash"><a href="/logout">Log Out</a></li>
-</ul>
-</div>
-</div>
-
-
+</div> -->
 
 <!-- Add a connection form -->
-<div class="col-sm-7">
+
 <div class="new-connection">
+
   <h3 class="dashboard-title"> Add a New Connection </h3>
 
-<form id="connect-form" method="post" action="/connections">
+<form id="connect-form" method="post" action="/connections" enctype="multipart/form-data">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="first-name-input"> First Name </label>
+      <input  id="first-name-input" name="firstName" type="text">
+      <br>
 
-  <label for="first-name-input"> First Name </label>
-  <input  id="first-name-input" name="firstName" type="text">
-  <br>
+      <label for="last-name-input"> Last Name </label>
+      <input  id="last-name-input" name="lastName" type="text">
+      <br>
 
-  <label for="last-name-input"> Last Name </label>
-  <input  id="last-name-input" name="lastName" type="text">
-  <br>
+      <label for="photo-input"> Photo Upload </label>
+      <input id="photo-input" name="photo" type="file">
+      <br>
 
-  <label for="email-input"> E-mail </label>
-  <input  id="email-input" name="emailValue" type="email">
-  <br>
+      <label for="email-input"> E-mail </label>
+      <input  id="email-input" name="emailValue" type="email">
+      <br>
+    </div>
 
-  <label for="number-input"> Phone Number </label>
-  <input  id="number-input" name="phoneNumber" type="number">
-  <br>
+    <div class="col-md-6">
+      <label for="company-input"> Company </label>
+      <input  id="compny-input" name="company" type="text">
+      <br>
 
-  <label for="origin-input"> Where You Met </label>
-  <input  id="origin-input" name="originOfConnection" type="text">
-  <br>
+      <label for="number-input"> Phone Number </label>
+      <input  id="number-input" name="phoneNumber" type="number">
+      <br>
 
-  <label   for="description-input"> Description </label>
-  <textarea id="description-input" name="connectDescription"></textarea>
-  <br>
+      <label for="origin-input"> Where You Met </label>
+      <input  id="origin-input" name="originOfConnection" type="text">
+      <br>
 
-  <button> Save </button>
-</div>
+      <label   for="description-input"> Description </label>
+      <textarea id="description-input" name="connectDescription"></textarea>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="save-button"> Save </button>
+    </div>
+  </div>
 </div>
 </form>
+</body>

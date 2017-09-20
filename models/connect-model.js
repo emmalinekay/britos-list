@@ -1,21 +1,41 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+mongoose.plugin(require('mongoose-regex-search'));
 
 const connectSchema = new Schema({
     firstName: {
       type: String,
+      normalized: String,
+      index: true,
+      searchable: true,
       required: [true, 'Please provide the Connection\'s name']
     },
     lastName: {
-      type: String
+      type: String,
+      normalized: String,
+      index: true,
+      searchable: true,
+    },
+    photoUrl: {
+      type: String,
     },
     email: {
       type: String,
-      match: [/.+@.+\..+/, "Your email doesn't have the right structure john@example.com"]
+      match: [/.+@.+\..+/, "Your email doesn't have the right structure john@example.com"],
+      index: true,
+      searchable: true,
+    },
+    company: {
+      type: String,
+      normalized: String,
+      index: true,
+      searchable: true,
     },
     phoneNumber: {
-      type: Number
+      type: Number,
+      index: true,
+      searchable: true,
     },
     originOfConnection: {
       type: String,

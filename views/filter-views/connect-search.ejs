@@ -1,9 +1,15 @@
-<h2> Search For Connections </h2>
+<!-- <body class="search-body"> -->
 
 <form method="get" action="/products/search-results">
   <label for="term-input"> What are you looking for? </label>
   <input  id="term-input" name="searchTerm" type="search"
       placeholder="John Smith">
 
-  <button> Search </button>
+  <button class="search-button"> Search </button>
+</form>
+
+<form method="get" action="/connections/search-results">
+  <label for="term-input"> Search again </label>
+  <input  id="term-input" name="searchTerm" type="search">
+  <button class="search-button"> Search </button>
 </form>

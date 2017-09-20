@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+// const ConnectModel = require('../models/connect-model.js');
 
 const Schema = mongoose.Schema;
 
@@ -10,17 +10,26 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
-    encryptedPassword: { type: String }
+    encryptedPassword: {
+      type: String
+    },
+      firstName: {
+        type: String,
 
-    // facebookID: { type: String },
-    //
-    // googleID: { type: String }
-  },
-
-{
-timestamps: true
-}
-);
+      },
+      lastName: {
+        type: String,
+      },
+      photoUrl: {
+        type: String,
+      },
+      company: {
+        type: String,
+      },
+      phoneNumber: {
+        type: Number,
+      },
+});
 
 const UserModel = mongoose.model('User', userSchema);
 

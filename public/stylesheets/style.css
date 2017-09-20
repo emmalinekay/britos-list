@@ -1,11 +1,22 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+.dash-body, .index-body {
+    background-color: #37454e;
+  }
+
+.nav1, .nav2, .nav3, .nav4 {
+  display: inline-block;
 }
 
-a {
-  color: #00B7FF;
-}*/
+.nav2, .nav4 {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.nav1, .nav2 {
+  padding-right: 10em;
+  padding-bottom: 1em;
+}
 
 
 .links {
@@ -59,12 +70,18 @@ a {
   font-size: 60px;
 }
 
-.btn {
-  background-color: #ABC2C9;
-  border: #ABC2C9;
-  color: black;
+
+.save-button {
+  width: 100%;
+  justify-content: center;
+  background-color: #37454e;
+  border: #37454e;
+  color: white;
 }
 
+.first-buttons {
+  justify-content: center;
+}
 .image-p {
   font-size: 30px;
 }
@@ -75,9 +92,9 @@ a {
 
 
 .services {
-  background-color: #ABC2C9;
-  border-top: outset 8px #9CB1B7;
-  border-bottom: inset 8px #9CB1B7;
+  background-color: #37454E;
+  border-top: outset 8px #2c373e;
+  border-bottom: inset 8px #2c373e;
   padding-top: 45px;
 }
 
@@ -103,6 +120,13 @@ a {
   padding-bottom: 45px;
   padding-left: 20px;
   padding-right: 20px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.5em;
+}
+
+.homeH2 {
+  font-family: 'Satisfy', cursive;
+  font-size: 4em;
 }
 
 .h2-projects {
@@ -158,6 +182,7 @@ a {
   border-radius: 100px;
   padding-left: 15px;
   padding-top: 30px;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #form input,
@@ -168,6 +193,7 @@ a {
   padding: 15px;
   width: 100%;
   border-radius: 40px;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #form button {
@@ -181,10 +207,10 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease background;
-  width: 25%;
-  border-radius: 40px;
+  width: 100%;
+  border-radius: 10px;
   margin-top: 30px;
-  margin-left: 280px;
+  /*margin-left: 280px;*/
 }
 
 #form button:hover {
@@ -196,6 +222,8 @@ a {
 
 .container {
   width: 460px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: white;
@@ -207,7 +235,12 @@ a {
   font-size: 60px;
 }
 
-.header-text, .login-heading, .signup-heading {
+.header-text {
+  font-family: 'Satisfy', cursive;
+  color: white;
+}
+
+.login-heading, .signup-heading {
   font-family: 'Satisfy', cursive;
   color: #666;
 }
@@ -239,20 +272,20 @@ a {
   text-align: center;
 }
 
+
 #connect-form {
   margin: 30px ;
-  width: 600px;
-  padding-left: 50px;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #connect-form label, textarea {
   color: #666;
-  display: inline-block;
+  /*display: inline-block;*/
   margin-bottom: 10px;
   width: 100%;
   padding-left: 30px;
   padding-top: 10px;
-  font-size: 16px;
+  font-size: 1.2em;
   border-radius: 10px;
 }
 
@@ -261,7 +294,7 @@ a {
   box-sizing: border-box;
   font-size: 20px;
   outline: 0;
-  padding: 15px;
+  padding: 5px;
   width: 100%;
   border-radius: 10px;
 }
@@ -277,10 +310,9 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease background;
-  width: 25%;
-  border-radius: 100px;
+  width: 20%;
+  border-radius: 10px;
   margin-top: 30px;
-  margin-left: 280px;
 }
 
 #connect-form button:hover {
@@ -291,22 +323,30 @@ a {
 }
 
 .new-connection, .edit-connection {
-  float: left;
-  width: 700px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 4em;
+  box-shadow: 0 0 20px 0px rgb(47, 47, 47),
+							0 0 20px 0px rgba(107, 104, 104, 0);
+}
+
+.new-connection, .edit-connection {
+  padding: 3em;
   background-color: white;
   border-radius: 10px;
-  margin-left: 40px;
+  margin-left: 4em;
+  margin-right: 4em;
   margin-bottom: 60px;
 }
 
-.edit-connection {
+/*.edit-connection {
    text-align: center;
+}*/
 
+.welcome-title, {
+  font-family: 'Helvetica, Arial', sans-serif;
+  font-size: 60px;
 }
 
-.dashboard-title, .welcome-title, .edit-title {
+.dashboard-title, .edit-title {
   text-align: center;
   font-family: 'Satisfy', cursive;
   color: #666;
@@ -315,15 +355,15 @@ a {
 
 .welcome {
   float: left;
-  width: 400px;
+  width: 300px;
   background-color: white;
-  padding-top: 40px;
+  /*padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 20px;
+  padding-left: 20px;*/
   background-color: white;
   border-radius: 10px;
-  margin-left: 40px;
-  margin-bottom: 60px;
+  /*margin-left: 40px;
+  margin-bottom: 60px;*/
 }
 
 .user-icon {
@@ -343,13 +383,15 @@ a {
   padding-left: 10px;
 }
 
-.nav {
-  background-color: white;
-  margin-bottom: 50px;
+#presentation2 {
+  padding-right: 3em;
+  list-style: none;
 }
 
+
+
 a {
-  color: #666;
+  color: white;
 }
 
 a:hover {

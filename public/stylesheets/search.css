@@ -1,0 +1,11 @@
+#term-input, .search-button {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px 0px rgb(47, 47, 47),
+              0 0 5px 0px rgba(107, 104, 104, 0);
+}
+
+.search-button {
+  background-color: white;
+
+}
