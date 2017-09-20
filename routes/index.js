@@ -8,11 +8,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/about', (req, res, next) => {
-  if(req.user === undefined) {
-    req.flash('securityError', 'Log in to access info');
-    res.redirect('/login');
-    return;
-  }
+
     res.render('connect-views/about.ejs');
 });
 

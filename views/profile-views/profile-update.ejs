@@ -1,38 +1,67 @@
+<style>
+body {
+  background-color: #37454e;
+}
+</style>
 
-<div class="edit-profile">
+<div class="edit-connection">
 
 <h2 class="edit-title"> Edit Your Profile </h2>
 
 
-<form id="connect-form" method="post" action="/connections/<%= connectInfo._id %>" enctype="multipart/form-data">
+<form id="connect-form" method="post" action="/your-profile/edit" enctype="multipart/form-data">
 
-      <label for="first-name-input"> Your First Name  </label>
+  <div class="row">
+    <div class="col-md-6">
+      <label for="first-name-input"> Your First Name </label>
       <input  id="first-name-input" name="firstName" type="text"
-          value="<%= connectInfo.firstName %>">
+          value="<%= userInfo.firstName %>">
       <br>
 
-      <label for="last-name-input"> Your Last Name  </label>
+      <label for="last-name-input"> Your Last Name </label>
       <input  id="last-name-input" name="lastName" type="text"
-            value="<%= connectInfo.lastName %>">
+            value="<%= userInfo.lastName %>">
       <br>
 
-      <label for="email-input"> Your New E-mail </label>
+      <label for="position-input"> Your Position </label>
+      <input  id="position-input" name="jobTitle" type="text"
+            value="<%= userInfo.jobTitle %>">
+      <br>
+
+      <label for="photo-input"> Your Photo  </label>
+      <input id="photo-input" name="photo" type="file">
+        <br>
+
+<div class="row">
+  <div class="col-md-6">
+
+      <label for="email-input"> Your E-mail </label>
       <input  id="email-input" name="emailValue" type="email"
-            value="<%= connectInfo.email %>">
+            value="<%= userInfo.email %>">
       <br>
   </div>
 
-      <label for="company-input"> Your Company </label>
+      <label for="company-input"> Your Company's Name </label>
       <input  id="compny-input" name="company" type="text"
-            value="<%= connectInfo.company%>">
+            value="<%= userInfo.company%>">
       <br>
 
-      <label for="number-input"> Your Phone Number</label>
+      <label for="number-input"> Your Phone Number </label>
       <input  id="number-input" name="phoneNumber" type="number"
-            value="<%= connectInfo.phoneNumber %>">
+            value="<%= userInfo.phoneNumber %>">
       <br>
 
-  <button> Update Your Profile </button>
+      <label for="social-link-input"> Your LinkedIn Page </label>
+      <input  id="social-link-input" name="socialLink" type="text"
+            value="<%= userInfo.socialLink%>">
+      <br>
+
+      <br>
+    </div>
+  </div>
+
+  <button> Update </button>
+
 
 </form>
 

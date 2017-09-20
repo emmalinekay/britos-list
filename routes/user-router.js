@@ -10,20 +10,20 @@ const myUploader = multer(
 );
 
 
-router.get('/your-profile', (req, res, next) => {
-
-
-    UserModel.find((err, user) => {
-        if (err) {
-            next(err);
-            return;
-        }
-
-        res.locals.userIn = user;
-        res.render('profile-views/profile-page.ejs');
-
-    });
-});
+// router.get('/your-profile', (req, res, next) => {
+//
+//
+//     UserModel.find((err, user) => {
+//         if (err) {
+//             next(err);
+//             return;
+//         }
+//
+//         res.locals.userIn = user;
+//         res.render('profile-views/profile-page.ejs');
+//
+//     });
+// });
 
 // router.post('/your-profile', myUploader.single('photo'), (req, res, next) => {
 //
@@ -68,19 +68,19 @@ router.get('/your-profile', (req, res, next) => {
   //   return;
   // }
 
-    UserModel.findById(
-      req.params.userId,
+    // UserModel.findById(
+    //   req.params.userId,
+    //
+    //   (err, userFromDb) => {
+    //       if (err) {
+    //           next(err);
+    //           return;
+    //       }
 
-      (err, userFromDb) => {
-          if (err) {
-              next(err);
-              return;
-          }
-
-          res.locals.userInfo = userFromDb;
+          res.locals.userInfo = req.user;
           res.render('profile-views/profile-page.ejs');
-      }
-    );
+    //   }
+    // );
 });
 
 //edit connections --------------------
@@ -92,55 +92,54 @@ router.get('/your-profile/edit', (req, res, next) => {
     res.redirect('/login');
     return;
   }
+    //
+    // UserModel.findById(
+    //     req.params.connectId,
+    //
+    //     (err, userFromDb) => {
+    //         if (err) {
+    //             next(err);
+    //             return;
+    //         }
 
-    UserModel.findById(
-        req.params.connectId,
-
-        (err, userFromDb) => {
-            if (err) {
-                next(err);
-                return;
-            }
-
-            res.locals.userInfo = userFromDb;
+            res.locals.userInfo = req.user;
             res.render('profile-views/profile-update.ejs');
-        }
-    );
+    //     }
+    // );
 });
 
 
-router.post('/your-profile', myUploader.single('photo'), (req, res, next) => {
+router.post('/your-profile/', myUploader.single('photo'), (req, res, next) => {
 
   if(req.user === undefined) {
     req.flash('securityError', 'Log in to access info');
     res.redirect('/login');
     return;
   }
-
-    UserModel.findById(
-      req.params.userId,
-
-      (err, userFromDb) => {
-          if (err) {
-              next(err);
-              return;
-          }
+    //
+    // UserModel.findById(
+    //   req.params.userId,
+    //
+    //   (err, userFromDb) => {
+    //       if (err) {
+    //           next(err);
+    //           return;
+    //       }
 
           // update the product's fields to the ones from the form
-          userFromDb.firstName           = req.body.firstName;
-          userFromDb.lastName            = req.body.lastName;
-          userFromDb.jobTitle            = req.body.jobTitle;
+          req.user.firstName           = req.body.firstName;
+          req.user.lastName            = req.body.lastName;
+          req.user.jobTitle            = req.body.jobTitle;
           // connectFromDb.photoUrl            = '/uploads/' + req.file.filename;
-          userFromDb.email               = req.body.emailValue;
-          userFromDb.company             = req.body.company;
-          userFromDb.phoneNumber         = req.body.phoneNumber;
-          userFromDb.socialLink          = req.body.socialLink;
-          connectFromDb.owner            = req.user._id;
+          req.user.email               = req.body.emailValue;
+          req.user.company             = req.body.company;
+          req.user.phoneNumber         = req.body.phoneNumber;
+          req.user.socialLink          = req.body.socialLink;
 
           if (req.file) {
-            connectFromDb.photoUrl = '/uploads/' + req.file.filename;
+            req.user.photoUrl = '/uploads/' + req.file.filename;
           }
-          userFromDb.save((err) => {
+          req.user.save((err) => {
               if (err) {
                   next(err);
                   return;
@@ -148,8 +147,8 @@ router.post('/your-profile', myUploader.single('photo'), (req, res, next) => {
 
               res.redirect('/your-profile/');
           });
-      }
-    );
+    //   }
+    // );
 });
 
 module.exports = router;
