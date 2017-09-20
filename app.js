@@ -10,9 +10,12 @@ const session      = require('express-session');
 const passport     = require('passport');
 const flash        = require('connect-flash');
 
-// require('dotenv').config();
+
 require('./config/passport-config.js');
-mongoose.connect('mongodb://localhost/britos-list');
+
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect('mongodb://localhost/britos-list');
 
 const app = express();
 
