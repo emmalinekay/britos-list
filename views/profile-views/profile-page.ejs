@@ -1,27 +1,29 @@
 <body class="profiles-body">
   <div class="profile-container">
-  		<h3 class="title-card"><%= connectInfo.firstName %> <%= connectInfo.lastName %></h3>
+  		<h3 class="title-card"><%= userInfo.firstName %> <%= userInfo.lastName %></h3>
 
 <div class="page-bullets">
 
-  <p class="page-info"> <b>Company:</b> <%= connectInfo.company %> </p>
+  <p class="page-info"> <b>Company:</b> <%= userInfo.company %> </p>
 
-  <p class="page-info"> <b> Email: </b> <%= connectInfo.email %> </p>
+  <p class="page-info"> <b> Email: </b> <%= userInfo.email %> </p>
 
-  <p class="page-info"> <b> Phone Number:</b> <%= connectInfo.phoneNumber %> </p>
+  <p class="page-info"> <b> Phone Number:</b> <%= userInfo.phoneNumber %> </p>
 
-  <p class="page-info"> <b> Where You Met: </b> <%= connectInfo.originOfConnection%> </p>
+  <p class="page-info"> <b> Where You Met: </b> <%= userInfo.originOfConnection%> </p>
 
-  <p class="page-info"> <b> Notes: </b> <%= connectInfo.description %> </p>
+  <p class="page-info"> <b> Notes: </b> <%= userInfo.description %> </p>
 
 </div>
 
 <div class="page-buttons">
   <div class="button1">
-    <a href="/connections/<%= connectInfo._id %>/edit" class="btn btn-outline-info profile-btn" role="button">Update</a>
+    <a href="/your-profile/<%= userInfo._id %>/edit" class="btn btn-outline-info profile-btn" role="button">Update</a>
   </div>
+</div>
 
-
-
-  </div>
 </body>
+
+<div class="contact-share">
+  <div class="sharethis-inline-share-buttons"></div>
+</div>

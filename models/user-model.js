@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// const ConnectModel = require('../models/connect-model.js');
 
 const Schema = mongoose.Schema;
 
@@ -15,9 +14,11 @@ const userSchema = new Schema(
     },
       firstName: {
         type: String,
-
       },
       lastName: {
+        type: String,
+      },
+      jobTitle: {
         type: String,
       },
       photoUrl: {
@@ -29,6 +30,13 @@ const userSchema = new Schema(
       phoneNumber: {
         type: Number,
       },
+      socialLink: {
+        type: String,
+      },
+      owner: {
+        type: Schema.Types.ObjectId,
+        required: true
+      }
 });
 
 const UserModel = mongoose.model('User', userSchema);

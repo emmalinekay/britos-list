@@ -7,6 +7,29 @@
     <h1 class="list-heading">Your Connections</h1>
   </div>
 
+
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+    <div class="btn-group" role="group">
+      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Filter By <span class="glyphicons glyphicons-chevron-down"></span>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/connections/firstname">First Name</a>
+        <a class="dropdown-item" href="/connections/lastname">Last Name</a>
+        <a class="dropdown-item" href="/connections/company">Company</a>
+        <a class="dropdown-item" href="/connections/position">Position</a>
+      </div>
+    </div>
+
+    <a href="/dashboard" class="btn btn-secondary" role="button">Add New Connection</a>
+    <a href="/connections/full-list" class="btn btn-secondary" role="button">Full List</a>
+
+  </div>
+
+  <!-- <a href="/dashboard" class="btn btn-secondary" role="button">Add a New Connection</a>
+  <a href="#" id ="export" role='button'> Export List </a>
+
   <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Filter By ↓
@@ -15,20 +38,23 @@
     <a class="dropdown-item" href="/connections/firstname">First Name</a>
     <a class="dropdown-item" href="/connections/lastname">Last Name</a>
     <a class="dropdown-item" href="/connections/company">Company</a>
+    <a class="dropdown-item" href="/connections/position">Position</a>
   </div>
-</div>
+</div> -->
 
 
   <!-- Responsive table starts here -->
   <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
   <div class="table-responsive-vertical shadow-z-1">
   <!-- Table starts here -->
+  <div id="dvData">
   <table id="table" class="table table-hover table-mc-light-blue">
       <thead>
         <tr>
           <th>First Name</th>
           <th>Last Name</th>
           <th>Company</th>
+          <th>Position</th>
           <th>Profile</th>
         </tr>
       </thead>
@@ -38,12 +64,16 @@
           <td data-title="ID"><%= oneConnect.firstName %></td>
           <td data-title="Name"><%= oneConnect.lastName %></td>
           <td data-title="Link"><%= oneConnect.company %></td>
+          <td data-title="Link"><%= oneConnect.jobTitle%></td>
           <td data-title="Status"><a href="/connections/<%= oneConnect._id %>" class="table-links"> Profile</a></td>
         </tr>
       <% })  %>
-
       </tbody>
     </table>
-      <a href="/dashboard" class="btn btn-outline-secondary footer-button" role="button">Add a New Connection</a>
   </div>
+
+
+  </div>
+
+
 </body>

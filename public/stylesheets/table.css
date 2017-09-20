@@ -59,10 +59,6 @@ html {
   font-size: 62.5%; // For rem units support
 }
 
-.footer-button {
-  width: 100%;
-  text-align: center;
-}
 
 .list-body {
   font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
@@ -762,4 +758,20 @@ html {
     .table-responsive-vertical .table-hover.table-mc-deep-orange > tbody > tr > td:hover {
         background-color: #ffccbc;
     }
+}
+
+.btn-group a, #btnGroupDrop1, #export {
+  color: black;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.25em;
+  margin-left: 10em;
+  margin-bottom: 0.75em;
+}
+
+
+.btn-secondary button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: .3s ease background;
+  border-radius: 40px;
 }

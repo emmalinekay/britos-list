@@ -1,12 +1,25 @@
-
-
+<!-- <h2> Your Connections </h2> -->
 <body class="list-body">
 <div id="demo">
-  <h1 class="list-heading">Your Results</h1>
-  <p> You searched for <strong>'<%= lastSearch %>'</strong>. </p>
-  <p> There were <%= listOfResults.length %> results. </p>
+  <div class="list-heading1">
+    <h1 class="list-heading">Your Connections</h1>
+  </div>
 
-    <a href="#" id ="export" role='button'> Export List </a>
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Filter By <span class="glyphicons glyphicons-chevron-down"></span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="/connections/firstname">First Name</a>
+      <a class="dropdown-item" href="/connections/lastname">Last Name</a>
+      <a class="dropdown-item" href="/connections/company">Company</a>
+      <a class="dropdown-item" href="/connections/position">Position</a>
+    </div>
+  </div>
+
+  <a href="/dashboard" class="btn btn-secondary" role="button">Add New Connection</a>
+  <a href="#" id ="export" role='button'> Export List </a>
+
 
   <!-- Responsive table starts here -->
   <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
@@ -20,29 +33,31 @@
           <th>Last Name</th>
           <th>Company</th>
           <th>Position</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Where You Met</th>
+          <th>Description</th>
           <th>Profile</th>
         </tr>
       </thead>
       <tbody>
-        <% listOfResults.forEach((oneConnect) => { %>
+        <% listOfConnections.forEach((oneConnect) => { %>
         <tr>
           <td data-title="ID"><%= oneConnect.firstName %></td>
           <td data-title="Name"><%= oneConnect.lastName %></td>
           <td data-title="Link"><%= oneConnect.company %></td>
-          <td data-title="Link"><%= oneConnect.jobTitle%></td>
+          <td data-title="Link"><%= oneConnect.jobTitle %></td>
+          <td data-title="Email"><%= oneConnect.email %></td>
+          <td data-title="Number"><%= oneConnect.phoneNumber %></td>
+          <td data-title="Origin"><%= oneConnect.originOfConnection %></td>
+          <td data-title="Desc"><%= oneConnect.description %></td>
           <td data-title="Status"><a href="/connections/<%= oneConnect._id %>" class="table-links"> Profile</a></td>
         </tr>
       <% })  %>
       </tbody>
     </table>
   </div>
-
-    <form method="get" action="/connections/search-results">
-      <label for="term-input"></label>
-      <input  id="term-input" name="searchTerm" type="search"
-          placeholder=""="Search Again">
-      <button class="search-button"> Search </button>
-    </form>
+  </div>
 
   </div>
 

@@ -43,7 +43,7 @@ passport.use(
               }
 
               if (userFromDb === null) {
-                  done(null, false, { message: 'Email is wrong. 💩' });
+                  done(null, false, { message: 'Incorrect E-mail.' });
                   return;
 
               }

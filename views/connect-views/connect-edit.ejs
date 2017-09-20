@@ -23,6 +23,11 @@ body {
             value="<%= connectInfo.lastName %>">
       <br>
 
+      <label for="position-input"> Position </label>
+      <input  id="position-input" name="jobTitle" type="text"
+            value="<%= connectInfo.jobTitle %>">
+      <br>
+
       <label for="photo-input"> New Photo (optional) </label>
       <input id="photo-input" name="photo" type="file">
         <br>
@@ -43,6 +48,10 @@ body {
       <label for="number-input"> New Phone Number (optional)</label>
       <input  id="number-input" name="phoneNumber" type="number"
             value="<%= connectInfo.phoneNumber %>">
+      <br>
+
+      <label for="social-link-input"> LinkedIn Page (optional) </label>
+      <input  id="social-link-input" name="socialLink" type="text">
       <br>
 
       <label for="origin-input"> Where You Met (optional) </label>

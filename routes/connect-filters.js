@@ -76,6 +76,22 @@ router.get('/connections/company', (req, res, next) => {
       });
 });
 
+router.get('/connections/position', (req, res, next) => {
+    ConnectModel
+      .find()
+      .sort({ jobTitle: 'ascending' })
+
+      .exec((err, nameOrder) => {
+          if (err) {
+              next(err);
+              return;
+          }
+
+          res.locals.listOfNames = nameOrder;
+          res.render('filter-views/position-results.ejs');
+      });
+});
+
 
 
 

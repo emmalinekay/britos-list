@@ -6,16 +6,21 @@
     <h1 class="list-heading">Filtered By Company</h1>
 </div>
 
-  <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Sort By ↓
+
+<div class="btn-group" role="group">
+  <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter By <span class="glyphicons glyphicons-chevron-down"></span>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="/connections/firstname">First Name</a>
     <a class="dropdown-item" href="/connections/lastname">Last Name</a>
     <a class="dropdown-item" href="/connections/company">Company</a>
+    <a class="dropdown-item" href="/connections/position">Position</a>
   </div>
 </div>
+
+<a href="/dashboard" class="btn btn-secondary" role="button">Add New Connection</a>
+<a href="/connections/full-list" class="btn btn-secondary" role="button">Full List</a>
 
   <!-- Responsive table starts here -->
   <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
@@ -27,6 +32,7 @@
           <th>First Name</th>
           <th>Last Name</th>
           <th>Company</th>
+          <th>Position</th>
           <th>Profile</th>
         </tr>
       </thead>
@@ -36,6 +42,7 @@
           <td data-title="ID"><%= oneConnect.firstName %></td>
           <td data-title="Name"><%= oneConnect.lastName %></td>
           <td data-title="Link"><%= oneConnect.company %></td>
+          <td data-title="Link"><%= oneConnect.jobTitle%></td>
           <td data-title="Status"><a href="/connections/<%= oneConnect._id %>" class="table-links"> Profile</a></td>
         </tr>
       <% })  %>
@@ -46,7 +53,7 @@
     <form method="get" action="/connections/search-results">
       <label for="term-input"></label>
       <input  id="term-input" name="searchTerm" type="search"
-          value="Search Again">
+          placeholder="Search Again">
       <button class="search-button"> Search </button>
     </form>
 

@@ -379,12 +379,12 @@
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  padding-right: 30px;
+  padding-right: 10px;
   padding-left: 10px;
 }
 
 #presentation2 {
-  padding-right: 3em;
+  padding-right: 1em;
   list-style: none;
 }
 
@@ -403,4 +403,49 @@ a:hover {
   padding-top: 30px;
   font-weight: bold;
   line-height: 20px;
+}
+
+.btn-group a, #btnGroupDrop1, #export {
+  color: black;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.25em;
+  margin-left: 10em;
+  margin-bottom: 0.75em;
+}
+
+.btn-secondary button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: .3s ease background;
+  border-radius: 40px;
+}
+
+.about-body {
+  background-color: #37454e;
+}
+
+.about-page {
+  background-color: white;
+  width: 70%;
+  padding: 2em 4em 2em 4em;
+  margin-top: 4em;
+  margin-bottom: 5em;
+  margin-left: 15%;
+  border-radius: 2%;
+}
+
+.about-howto {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3em;
+}
+
+.about-header {
+  font-size: 4em;
+  font-family: 'Satisfy', cursive;
+}
+
+
+.about-text {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-size: 1.5em;
 }

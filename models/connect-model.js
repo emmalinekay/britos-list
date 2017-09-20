@@ -17,6 +17,11 @@ const connectSchema = new Schema({
       index: true,
       searchable: true,
     },
+    jobTitle: {
+      type: String,
+      index: true,
+      searchable: true,
+    },
     photoUrl: {
       type: String,
     },
@@ -37,8 +42,15 @@ const connectSchema = new Schema({
       index: true,
       searchable: true,
     },
+    socialLink: {
+      type: String,
+      index: true,
+      searchable: true,
+    },
     originOfConnection: {
       type: String,
+      index: true,
+      searchable: true,
     },
     description: {
       type: String,

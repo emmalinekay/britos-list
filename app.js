@@ -70,6 +70,11 @@ app.use(myConnectFilters);
 const myConnectRoutes = require('./routes/connect-router.js');
 app.use(myConnectRoutes);
 
+const myUserRoutes = require('./routes/user-router.js');
+app.use(myUserRoutes);
+
+
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
