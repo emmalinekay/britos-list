@@ -54,7 +54,9 @@ const connectSchema = new Schema({
     },
     description: {
       type: String,
-      maxlength: [1000, "Your description cannot be over 1000 characters"]
+      maxlength: [1000, "Your description cannot be over 1000 characters"],
+      index: true,
+      searchable: true,
     },
     owner: {
       type: Schema.Types.ObjectId,

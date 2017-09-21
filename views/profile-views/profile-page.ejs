@@ -1,8 +1,17 @@
+<style>
+body {
+  background-color: #37454e;
+}
+</style>
+
 <body class="profiles-body">
   <div class="profile-container">
+    <img src="<%= userInfo.photoUrl %>" class="card-pic">
   		<h3 class="title-card"><%= userInfo.firstName %> <%= userInfo.lastName %></h3>
 
 <div class="page-bullets">
+
+  <p class="page-info"> <b>Company:</b> <%= userInfo.jobTitle %> </p>
 
   <p class="page-info"> <b>Company:</b> <%= userInfo.company %> </p>
 
@@ -10,9 +19,7 @@
 
   <p class="page-info"> <b> Phone Number:</b> <%= userInfo.phoneNumber %> </p>
 
-  <p class="page-info"> <b> Where You Met: </b> <%= userInfo.originOfConnection%> </p>
-
-  <p class="page-info"> <b> Notes: </b> <%= userInfo.description %> </p>
+  <p class="page-info"> <b> LinkedIn: </b> <a href="<%= userInfo.socialLink%>" id="linkedin"> <%= userInfo.socialLink%> </a> </p>
 
 </div>
 

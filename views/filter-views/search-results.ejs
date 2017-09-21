@@ -6,7 +6,7 @@
   <p> You searched for <strong>'<%= lastSearch %>'</strong>. </p>
   <p> There were <%= listOfResults.length %> results. </p>
 
-    <a href="#" id ="export" role='button'> Export List </a>
+
 
   <!-- Responsive table starts here -->
   <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
@@ -36,6 +36,8 @@
       </tbody>
     </table>
   </div>
+
+  <a href="#" id ="export" role='button'> Export List </a> <br> <br>
 
     <form method="get" action="/connections/search-results">
       <label for="term-input"></label>

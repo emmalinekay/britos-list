@@ -5,20 +5,25 @@
     <h1 class="list-heading">Your Connections</h1>
   </div>
 
-  <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Filter By <span class="glyphicons glyphicons-chevron-down"></span>
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="/connections/firstname">First Name</a>
-      <a class="dropdown-item" href="/connections/lastname">Last Name</a>
-      <a class="dropdown-item" href="/connections/company">Company</a>
-      <a class="dropdown-item" href="/connections/position">Position</a>
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+    <div class="btn-group" role="group">
+      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Filter By
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/connections/firstname">First Name</a>
+        <a class="dropdown-item" href="/connections/lastname">Last Name</a>
+        <a class="dropdown-item" href="/connections/company">Company</a>
+        <a class="dropdown-item" href="/connections/position">Position</a>
+      </div>
     </div>
-  </div>
+
 
   <a href="/dashboard" class="btn btn-secondary" role="button">Add New Connection</a>
-  <a href="#" id ="export" role='button'> Export List </a>
+
+
+</div>
 
 
   <!-- Responsive table starts here -->
@@ -59,7 +64,7 @@
   </div>
   </div>
 
-  </div>
+  <a href="#" id ="export" role='button'> Export List </a>
 
   <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
           <!-- If you want to use jquery 2+: https://code.jquery.com/jquery-2.1.0.min.js -->

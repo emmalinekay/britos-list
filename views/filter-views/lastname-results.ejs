@@ -3,12 +3,13 @@
 <body class="list-body">
 <div id="demo">
   <div class="list-heading1">
-    <h1 class="list-heading">Filtered By Last Name</h1>
+    <h1 class="list-heading">Filtered by Last Name </h1>
 </div>
 
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 <div class="btn-group" role="group">
   <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Filter By <span class="glyphicons glyphicons-chevron-down"></span>
+    Filter By
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="/connections/firstname">First Name</a>
@@ -19,13 +20,13 @@
 </div>
 
 <a href="/dashboard" class="btn btn-secondary" role="button">Add New Connection</a>
-<a href="/connections/full-list" class="btn btn-secondary" role="button">Full List</a>
 
-
+</div>
   <!-- Responsive table starts here -->
   <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
   <div class="table-responsive-vertical shadow-z-1">
   <!-- Table starts here -->
+  <div id="dvData">
   <table id="table" class="table table-hover table-mc-light-blue">
       <thead>
         <tr>
@@ -49,13 +50,8 @@
 
       </tbody>
     </table>
-
-    <form method="get" action="/connections/search-results">
-      <label for="term-input"></label>
-      <input  id="term-input" name="searchTerm" type="search"
-          placeholder="Search Again">
-      <button class="search-button"> Search </button>
-    </form>
-
   </div>
+
+</div>
+
 </body>

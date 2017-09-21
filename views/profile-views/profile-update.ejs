@@ -9,7 +9,7 @@ body {
 <h2 class="edit-title"> Edit Your Profile </h2>
 
 
-<form id="connect-form" method="post" action="/your-profile/edit" enctype="multipart/form-data">
+<form id="edit-form" method="post" action="/your-profile" enctype="multipart/form-data">
 
   <div class="row">
     <div class="col-md-6">
@@ -32,14 +32,15 @@ body {
       <input id="photo-input" name="photo" type="file">
         <br>
 
-<div class="row">
+      </div>
+
+
   <div class="col-md-6">
 
       <label for="email-input"> Your E-mail </label>
       <input  id="email-input" name="emailValue" type="email"
             value="<%= userInfo.email %>">
       <br>
-  </div>
 
       <label for="company-input"> Your Company's Name </label>
       <input  id="compny-input" name="company" type="text"
@@ -59,6 +60,9 @@ body {
       <br>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
 
   <button> Update </button>
 

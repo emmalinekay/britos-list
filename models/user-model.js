@@ -32,10 +32,6 @@ const userSchema = new Schema(
       },
       socialLink: {
         type: String,
-      },
-      owner: {
-        type: Schema.Types.ObjectId,
-        required: true
       }
 });
 

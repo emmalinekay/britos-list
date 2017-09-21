@@ -33,17 +33,17 @@
             <li id="presentation"><a href="/your-profile">Your Card</a></li>
             <li id="presentation"><a href="/logout">Log Out</a></li>
 
-
-
           </div>
 
-          <div class="nav3">
+
+          <div class="nav3 input-group stylish-input-group">
             <li id="presentation2">
+              <div id="imaginary-container">
               <form method="get" action="/connections/search-results">
                 <label for="term-input"></label>
-                <input  id="term-input" name="searchTerm" type="search">
-                <button class="search-button"> Search </button>
+                <input  id="term-input" name="searchTerm" type="search" placeholder="Search... ">
               </form>
+            </div>
             </li>
           </div>
           </ul>
@@ -64,6 +64,8 @@
     </header>
 
     <%- body %>
+
+  
 
     <script
 src="https://code.jquery.com/jquery-3.2.1.min.js"

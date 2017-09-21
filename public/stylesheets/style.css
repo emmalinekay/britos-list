@@ -1,6 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 
+
 .dash-body, .index-body {
     background-color: #37454e;
   }
@@ -164,11 +165,7 @@
   color: white;
 }
 
-.footer {
-  background-color: #3B3B3B;
-  border-top: outset 8px #F96B61;
-  padding-bottom: 15px;
-}
+
 
 #form {
   margin: 30px auto;
@@ -274,12 +271,12 @@
 }
 
 
-#connect-form {
+#connect-form, #edit-form {
   margin: 30px ;
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-#connect-form label, textarea {
+#connect-form label, textarea, #edit-form label {
   color: #666;
   /*display: inline-block;*/
   margin-bottom: 10px;
@@ -291,7 +288,8 @@
 }
 
 #connect-form input,
-#connect-form button {
+#connect-form button, #edit-form input,
+#edit-form button {
   box-sizing: border-box;
   font-size: 20px;
   outline: 0;
@@ -300,8 +298,8 @@
   border-radius: 10px;
 }
 
-#connect-form button {
-  background: #ABC2C9;
+#connect-form button, #edit-form button {
+  background: #37454e;;
   border: 1px solid #9CB1B7;
   color: #fff;
   cursor: pointer;
@@ -316,7 +314,7 @@
   margin-top: 30px;
 }
 
-#connect-form button:hover {
+#connect-form button:hover, #edit-form button:hover {
   background: #fff;
   color: #43a3e6;
   transition: .3s ease background;
@@ -389,6 +387,10 @@
   list-style: none;
 }
 
+#presentation button:hover, #presentation2 button:hover {
+  color: #666;
+}
+
 
 
 a {
@@ -406,7 +408,9 @@ a:hover {
   line-height: 20px;
 }
 
-.btn-group a, #btnGroupDrop1, #export {
+
+
+.btn-group a, #btnGroupDrop1 {
   color: black;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.25em;
@@ -449,4 +453,12 @@ a:hover {
 .about-text {
   font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
   font-size: 1.5em;
+}
+
+#linkedin  {
+  color: #666;
+}
+
+#linkedin:hover {
+  color: black;
 }
